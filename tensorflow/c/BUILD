@@ -45,6 +45,14 @@ tf_cuda_library(
     }),
 )
 
+exports_files(
+    [
+        "version_script.lds",
+        "exported_symbols.lds",
+    ],
+    visibility = ["//visibility:public"],
+)
+
 tf_cuda_library(
     name = "tf_status_helper",
     srcs = ["tf_status_helper.cc"],
@@ -101,6 +109,7 @@ tf_cc_test(
         "//tensorflow/core:test_main",
         "//tensorflow/core:testlib",
         "//tensorflow/core/kernels:array",
+        "//tensorflow/core/kernels:control_flow_ops",
         "//tensorflow/core/kernels:math",
         "//third_party/eigen3",
     ],

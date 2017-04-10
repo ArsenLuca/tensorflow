@@ -27,7 +27,8 @@ from six.moves import xrange  # pylint: disable=redefined-builtin
 from tensorflow.contrib.learn.python.learn.datasets import base
 from tensorflow.python.framework import dtypes
 
-SOURCE_URL = 'http://yann.lecun.com/exdb/mnist/'
+# CVDF mirror of http://yann.lecun.com/exdb/mnist/
+SOURCE_URL = 'https://storage.googleapis.com/cvdf-datasets/mnist/'
 
 
 def _read32(bytestream):
@@ -193,8 +194,8 @@ class DataSet(object):
       start = 0
       self._index_in_epoch = batch_size - rest_num_examples
       end = self._index_in_epoch
-      images_new_part = self.images[start:end]
-      labels_new_part = self.labels[start:end]
+      images_new_part = self._images[start:end]
+      labels_new_part = self._labels[start:end]
       return numpy.concatenate((images_rest_part, images_new_part), axis=0) , numpy.concatenate((labels_rest_part, labels_new_part), axis=0)
     else:
       self._index_in_epoch += batch_size
