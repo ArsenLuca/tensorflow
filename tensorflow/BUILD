@@ -218,6 +218,7 @@ filegroup(
         "//tensorflow/contrib/graph_editor:all_files",
         "//tensorflow/contrib/grid_rnn:all_files",
         "//tensorflow/contrib/hooks:all_files",
+        "//tensorflow/contrib/hvx/hvx_ops_support_checker:all_files",
         "//tensorflow/contrib/image:all_files",
         "//tensorflow/contrib/imperative:all_files",
         "//tensorflow/contrib/input_pipeline:all_files",
@@ -284,6 +285,7 @@ filegroup(
         "//tensorflow/examples/tutorials/estimators:all_files",
         "//tensorflow/examples/tutorials/mnist:all_files",
         "//tensorflow/examples/tutorials/word2vec:all_files",
+        "//tensorflow/examples/wav_to_spectrogram:all_files",
         "//tensorflow/go:all_files",
         "//tensorflow/java:all_files",
         "//tensorflow/java/src/main/java/org/tensorflow/examples:all_files",
@@ -308,10 +310,12 @@ filegroup(
         "//tensorflow/tensorboard/components/vz_sorting/test:all_files",
         "//tensorflow/tensorboard/lib:all_files",
         "//tensorflow/tensorboard/plugins:all_files",
-        "//tensorflow/tensorboard/plugins/debugger:all_files",
         "//tensorflow/tensorboard/plugins/projector:all_files",
         "//tensorflow/tensorboard/plugins/text:all_files",
         "//tensorflow/tensorboard/scripts:all_files",
+        "//tensorflow/tools/api/golden:all_files",
+        "//tensorflow/tools/api/lib:all_files",
+        "//tensorflow/tools/api/tests:all_files",
         "//tensorflow/tools/common:all_files",
         "//tensorflow/tools/compatibility:all_files",
         "//tensorflow/tools/dist_test/server:all_files",
@@ -344,6 +348,11 @@ filegroup(
             "//third_party/mkl:intel_binary_blob",
         ],
     ),
+)
+
+filegroup(
+    name = "docs_src",
+    data = glob(["docs_src/**/*.md"]),
 )
 
 # -------------------------------------------

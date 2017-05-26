@@ -24,6 +24,8 @@ See the @{$python/train} guide.
 @@AdagradDAOptimizer
 @@MomentumOptimizer
 @@AdamOptimizer
+@@NadamOptimizer
+@@RadamOptimizer
 @@FtrlOptimizer
 @@ProximalGradientDescentOptimizer
 @@ProximalAdagradOptimizer
@@ -68,6 +70,7 @@ See the @{$python/train} guide.
 @@LoggingTensorHook
 @@StopAtStepHook
 @@CheckpointSaverHook
+@@CheckpointSaverListener
 @@NewCheckpointReader
 @@StepCounterHook
 @@NanLossDuringTrainingError
@@ -103,6 +106,8 @@ from tensorflow.python.training.adagrad import AdagradOptimizer
 from tensorflow.python.training.adagrad_da import AdagradDAOptimizer
 from tensorflow.python.training.proximal_adagrad import ProximalAdagradOptimizer
 from tensorflow.python.training.adam import AdamOptimizer
+from tensorflow.python.training.adam import NadamOptimizer
+from tensorflow.python.training.adam import RadamOptimizer
 from tensorflow.python.training.ftrl import FtrlOptimizer
 from tensorflow.python.training.momentum import MomentumOptimizer
 from tensorflow.python.training.moving_averages import ExponentialMovingAverage
@@ -128,6 +133,7 @@ from tensorflow.python.training.basic_session_run_hooks import SecondOrStepTimer
 from tensorflow.python.training.basic_session_run_hooks import LoggingTensorHook
 from tensorflow.python.training.basic_session_run_hooks import StopAtStepHook
 from tensorflow.python.training.basic_session_run_hooks import CheckpointSaverHook
+from tensorflow.python.training.basic_session_run_hooks import CheckpointSaverListener
 from tensorflow.python.training.basic_session_run_hooks import StepCounterHook
 from tensorflow.python.training.basic_session_run_hooks import NanLossDuringTrainingError
 from tensorflow.python.training.basic_session_run_hooks import NanTensorHook
